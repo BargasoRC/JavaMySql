@@ -25,6 +25,14 @@ public class Database {
     public int getID(){
         String query = "SELECT MAX('accountID') FROM account";
         return Integer.parseInt((String.valueOf(connect(query))));
+//        ResultSet connect = connect(query);
+//        int result = 0;
+//        try{
+//            result = connect.getInt("accountID");
+//        }catch(SQLException e){
+//            System.out.println(e);
+//        }
+//        return result;
     }
 
     public ResultSet createAccount(String username, String password) {
